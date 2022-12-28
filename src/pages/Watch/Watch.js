@@ -5,7 +5,7 @@ import Simular from '../../components/Simular/Simular';
 import Title from '../../components/shared/Tittle';
 import Comment from '../../components/Comment/Comment';
 
-import SeasonItem from '../../components/tv/seasonItem';
+import SeasonItem from '../../components/tv/SeasonItem';
 import TVInfo from '../../components/tv/TVInfo';
 import EmbedVideoTv from '../../components/tv/EmbedVideoTv';
 import Navside from '../../components/Nav/NavSide';
