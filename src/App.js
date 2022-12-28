@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './styles/app.css';
+import './styles/App.css';
 import HomeScreen from './pages/Home/HomeScreen';
 // eslint-disable-next-line no-unused-vars
 import { Route, Routes, useLocation } from 'react-router-dom';

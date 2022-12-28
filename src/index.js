@@ -7,8 +7,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter } from 'react-router-dom';
-import './styles/app.css';
-import './styles/responsive.css';
+import './styles/App.css';
+import './styles/Responsive.css';
 import { FronteggProvider } from '@frontegg/react';
 
 const container = document.getElementById('root');

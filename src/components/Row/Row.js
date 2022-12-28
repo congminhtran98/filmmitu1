@@ -4,8 +4,6 @@ import SliderMovie from '../Slider/SliderMovie';
 import SliderTv from '../Slider/SliderTv';
 import { getMovieHistory } from '../../utils/localStro';
 // import Title from '../../components/Shared/Title';
-import MoviePoster from '../MoviePoster/MoviePoster';
-import { motion, AnimatePresence } from 'framer-motion';
 import Skeleton from '../Skeleton/Skeleton';
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
@@ -16,7 +14,6 @@ const Row = (setShowModal, type) => {
     loading: true,
     data: [],
   });
-  const [genre, setGenres] = useState([]);
   return (
     <div className="container">
       {historyWatch.length > 0 ? <RecentlySlider data={historyWatch} /> : null}
@@ -30,33 +27,6 @@ const Row = (setShowModal, type) => {
         <SliderTv type="popular" />
         <SliderTv type="top_rated" />
       </div>
-      <AnimatePresence>
-        {!movies.loading
-          ? movies.data.map((movie, index) => (
-              <React.Fragment key={movie.id}>
-                <MoviePoster
-                  setShowModal={setShowModal}
-                  index={index}
-                  key={movie.id}
-                  baseUrl={baseUrl}
-                  movie={movie}
-                  genres={genre}
-                  movieId={movie.id}
-                  type={type}
-                />
-              </React.Fragment>
-            ))
-          : [1, 2, 3, 4, 5, 6].map((n) => (
-              <Skeleton
-                sx={{ bgcolor: 'grey.900' }}
-                variant="rectangular"
-                animation="wave"
-                width={180}
-                height={270}
-                key={n}
-              />
-            ))}
-      </AnimatePresence>
     </div>
   );
 };
